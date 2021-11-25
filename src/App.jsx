@@ -1,3 +1,4 @@
+import Player from 'components/game/Player';
 import Ennemy from './components/game/Ennemy';
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <>
       <h1>Componante APP</h1>
       <Ennemy />
+      <Player />
     </>
   );
 }
