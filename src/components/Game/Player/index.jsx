@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-// import PropTypes from 'prop-types';
 
 export default function Player() {
   const [playerInfos, setPlayerInfos] = useState([]);
@@ -25,12 +24,3 @@ export default function Player() {
     </>
   );
 }
-
-// Player.propTypes = {
-//   playerLvl: PropTypes.number,
-//   setPlayerLvl: PropTypes.func,
-// };
-// Player.defaultProps = {
-//   playerLvl: [],
-//   setPlayerLvl: () => {},
-// };

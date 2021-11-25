@@ -1,4 +1,3 @@
-
 import Home from './components/Home';
 import Game from './components/Game';
 import Button from './components/Game/Button';
