@@ -1,7 +1,7 @@
 body {
   background-image:
     url(
-      '/src/components/game/Assets/background.png'
+      '/src/components/Game/Assets/background.png'
     );
   background-size: cover;
   height: 100vh;
