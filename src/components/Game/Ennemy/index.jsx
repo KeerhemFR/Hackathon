@@ -17,15 +17,13 @@ export default function Ennemy() {
       });
   }, []);
 
-  // const ennemyHp = Math.floor(ennemyInfos.nb_fan / 10000);
-
   return (
     <>
       <EnnemyCard
         ennemyImg={ennemyInfos.picture_big}
         ennemyName={ennemyInfos.name}
       />
-      <LifeBar />
+      <LifeBar ennemyFan={ennemyInfos.nb_fan} />
     </>
   );
 }
