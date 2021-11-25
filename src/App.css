@@ -1,5 +1,14 @@
 body {
-  background-image: url('/src/components/Game/Assets/background.png');
+  background-image:
+    url(
+      '/src/components/Game/Assets/background.png'
+    );
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
+}
+
+.fightContain {
+  display: flex;
+  justify-content: space-evenly;
 }

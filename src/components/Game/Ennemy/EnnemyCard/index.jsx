@@ -5,7 +5,7 @@ export default function EnnemyCard({ ennemyImg, ennemyName }) {
   return (
     <article className="ennemyCard">
       <img src={ennemyImg} alt={ennemyName} />
-      <p>{ennemyName}&nbsp;&nbsp;</p>
+      <p className="ennemyName">{ennemyName}&nbsp;&nbsp;</p>
     </article>
   );
 }
