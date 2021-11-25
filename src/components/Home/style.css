@@ -1,12 +1,15 @@
 .logo {
   width: 100vw;
-  height: 45vh;
   margin-top: 7vh;
 }
 
 .omgLogo {
   width: 70%;
   margin-left: 10%;
+}
+
+.homeButton {
+  margin-top: 10%;
 }
 
 @media only screen and (max-width: 1500px) {

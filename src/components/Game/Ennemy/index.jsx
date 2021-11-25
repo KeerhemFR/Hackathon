@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import EnnemyCard from './EnnemyCard';
 import LifeBar from './LifeBar';
+import './style.css';
 
 export default function Ennemy() {
   const [ennemyInfos, setEnnemyInfos] = useState([]);
@@ -28,6 +29,9 @@ export default function Ennemy() {
       });
   }, []);
   return (
+    
+    <div className="EnemyFighting">
+
     <>
       {playlist.data && (
         <audio
@@ -51,6 +55,7 @@ export default function Ennemy() {
         ennemyName={ennemyInfos.name}
       />
       <LifeBar ennemyFan={ennemyInfos.nb_fan} />
-    </>
+    </div>
+</>
   );
 }
