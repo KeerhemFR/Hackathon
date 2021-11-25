@@ -6,18 +6,8 @@
 }
 
 progress[value] {
-  /* Get rid of the default appearance */
   appearance: none;
-
-  /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
-  border: 4px solid orange;
-
-  /* Add dimensions */
   width: 50vw;
-  height: 20px;
-
-  /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
-  background-color: whitesmoke;
+  height: 30px;
   border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
 }
