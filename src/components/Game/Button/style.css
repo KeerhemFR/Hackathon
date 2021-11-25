@@ -59,7 +59,7 @@ button::after {
 }
 
 button:hover {
-  color: black;
+  background: rgb(255, 2, 129);
 }
 
 @keyframes flicker {

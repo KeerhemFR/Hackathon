@@ -1,6 +1,7 @@
 import Home from './components/Home';
-import Game from './components/Game';
+import Player from './components/Game/Player';
 import Button from './components/Game/Button';
+import Ennemy from './components/Game/Ennemy';
 import './reset.css';
 import './App.css';
 
@@ -9,8 +10,12 @@ function App() {
     <>
       <Home />
       <h1>Componante APP</h1>
-      <Game />
-      <Button />
+      <div className="fightContain">
+        <Player />
+        <Ennemy />
+      </div>
+      <Button content="Play" />
+      <Button content="Start" />
     </>
   );
 }

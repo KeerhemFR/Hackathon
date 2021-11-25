@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './style.css';
 
 export default function Player() {
   const [playerInfos, setPlayerInfos] = useState([]);
@@ -18,9 +19,13 @@ export default function Player() {
   // setPlayerLvl();
 
   return (
-    <>
-      <img src={playerInfos.picture_big} alt={`${playerInfos.name}`} />
-      <div>{playerInfos.name}</div>
-    </>
+    <article className="playerCard">
+      <img
+        className="playerImage"
+        src={playerInfos.picture_big}
+        alt={`${playerInfos.name}`}
+      />
+      <p className="playerName">&nbsp;&nbsp;{playerInfos.name}</p>
+    </article>
   );
 }

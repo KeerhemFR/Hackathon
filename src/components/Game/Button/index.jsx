@@ -1,10 +1,14 @@
 import './style.css';
+import PropTypes from 'prop-types';
 
-export default function Button() {
+export default function Button({ content }) {
   return (
     <main>
-      <button type="button">Play</button>
-      <button type="button">Start</button>
+      <button type="button">{content}</button>
     </main>
   );
 }
+
+Button.propTypes = {
+  content: PropTypes.string.isRequired,
+};
