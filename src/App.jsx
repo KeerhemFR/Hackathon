@@ -1,4 +1,6 @@
-import Ennemy from './components/game/Ennemy';
+import Ennemy from './components/Game/Ennemy';
+import './reset.css';
+import './App.css';
 
 function App() {
   return (
