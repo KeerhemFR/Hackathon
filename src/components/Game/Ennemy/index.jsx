@@ -16,8 +16,6 @@ export default function Ennemy() {
       });
   }, []);
 
-  // const ennemyHp = Math.floor(ennemyInfos.nb_fan / 10000);
-
   return (
     <>
       <EnnemyCard
