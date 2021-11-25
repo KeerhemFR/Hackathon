@@ -29,10 +29,7 @@ export default function Ennemy() {
       });
   }, []);
   return (
-    
     <div className="EnemyFighting">
-
-    <>
       {playlist.data && (
         <audio
           controls
@@ -56,6 +53,5 @@ export default function Ennemy() {
       />
       <LifeBar ennemyFan={ennemyInfos.nb_fan} />
     </div>
-</>
   );
 }
