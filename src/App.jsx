@@ -1,4 +1,4 @@
-import Ennemy from './components/game/Ennemy';
+import Ennemy from './components/Game/Ennemy';
 
 function App() {
   return (
