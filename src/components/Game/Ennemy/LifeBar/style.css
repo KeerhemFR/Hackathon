@@ -1,0 +1,13 @@
+.LifeBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+progress[value] {
+  appearance: none;
+  width: 50vw;
+  height: 30px;
+  border-radius: 3px;
+}
