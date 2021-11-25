@@ -4,5 +4,6 @@ body {
       '/src/components/Game/Assets/background.png'
     );
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
 }
