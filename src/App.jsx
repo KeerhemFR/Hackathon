@@ -1,5 +1,8 @@
-import Ennemy from './components/Game/Ennemy';
+
 import Home from './components/Home';
+import Game from './components/Game';
+import Button from './components/Game/Button';
+import './reset.css';
 import './App.css';
 
 function App() {
@@ -7,7 +10,8 @@ function App() {
     <>
       <Home />
       <h1>Componante APP</h1>
-      <Ennemy />
+      <Game />
+      <Button />
     </>
   );
 }
