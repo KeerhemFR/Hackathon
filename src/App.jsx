@@ -1,21 +1,18 @@
+import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Player from './components/Game/Player';
-import Button from './components/Game/Button';
-import Ennemy from './components/Game/Ennemy';
+import ChooseChar from './components/ChooseChar';
+import Game from './components/Game';
 import './reset.css';
 import './App.css';
 
 function App() {
   return (
     <>
-      <Home />
-      <h1>Componante APP</h1>
-      <div className="fightContain">
-        <Player />
-        <Ennemy />
-      </div>
-      <Button content="Play" />
-      <Button content="Start" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ChooseChar" element={<ChooseChar />} />
+        <Route path="/Game" element={<Game />} />
+      </Routes>
     </>
   );
 }
