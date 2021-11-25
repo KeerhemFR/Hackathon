@@ -1,5 +1,12 @@
+import Ennemy from './components/game/Ennemy';
+
 function App() {
-  return <h1>Hello there!</h1>;
+  return (
+    <>
+      <h1>Componante APP</h1>
+      <Ennemy />
+    </>
+  );
 }
 
 export default App;
