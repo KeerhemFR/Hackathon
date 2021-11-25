@@ -1,32 +1,18 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import GameContext from 'context/GameContext';
+import { useContext, useState } from 'react';
 import './style.css';
 
-export default function LifeBar({ ennemyFan }) {
-  const [enemyHP] = useState(Math.floor(ennemyFan / 1000) || 42);
-  const clickPower = 100;
+export default function LifeBar() {
+  const { progress, setProgress } = useContext(GameContext);
+  const { ennemyInfos } = useContext(GameContext);
+  const [enemyHP] = useState(Math.floor(ennemyInfos.nb_fan / 1000));
 
-  const [progress, setProgress] = useState(enemyHP);
   if (progress < 0) {
     setProgress(0);
   }
-  console.log(enemyHP);
-  console.log(progress);
+
   return (
     <div className="LifeBar">
-      <div className="button-bar">
-        <button
-          className="attackBtn"
-          type="submit"
-          onClick={() => setProgress(progress - clickPower)}
-        >
-          Attack
-        </button>
-        <button type="submit" onClick={() => setProgress(enemyHP)}>
-          Healing
-        </button>
-      </div>
-
       <p>
         HP :{progress}/{enemyHP}
       </p>
@@ -34,7 +20,3 @@ export default function LifeBar({ ennemyFan }) {
     </div>
   );
 }
-
-LifeBar.propTypes = {
-  ennemyFan: PropTypes.number.isRequired,
-};
