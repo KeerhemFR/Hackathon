@@ -1,0 +1,5 @@
+body {
+  background-image: url('/src/components/Assets/background.png');
+  width: 110vw;
+  overflow: hidden;
+}

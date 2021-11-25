@@ -1,0 +1,18 @@
+.logo {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.omgLogo {
+  width: 60vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.logoType {
+  width: 60vw;
+  position: absolute;
+}
