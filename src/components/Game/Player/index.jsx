@@ -16,7 +16,6 @@ export default function Player() {
       });
   }, []);
   console.log(playerInfos);
-  // setPlayerLvl();
 
   return (
     <article className="playerCard">
