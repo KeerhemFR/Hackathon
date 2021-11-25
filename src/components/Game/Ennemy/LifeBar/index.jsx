@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 export default function LifeBar({ ennemyFan }) {
-  const enemyHP = Math.floor(ennemyFan / 1000);
+  const [enemyHP] = useState(Math.floor(ennemyFan / 1000) || 42);
   const clickPower = 100;
 
   const [progress, setProgress] = useState(enemyHP);

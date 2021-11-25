@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import AttackButton from '../AttackButton';
 import EnnemyCard from './EnnemyCard';
 import LifeBar from './LifeBar';
 
@@ -23,7 +24,8 @@ export default function Ennemy() {
         ennemyImg={ennemyInfos.picture_big}
         ennemyName={ennemyInfos.name}
       />
-      <LifeBar ennemyFan={ennemyInfos.nb_fan} />
+      <AttackButton />
+      {ennemyInfos.nb_fan && <LifeBar ennemyFan={ennemyInfos.nb_fan} />}
     </>
   );
 }
