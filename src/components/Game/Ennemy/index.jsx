@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import EnnemyCard from './EnnemyCard';
+import LifeBar from './LifeBar';
 
 export default function Ennemy() {
   const [ennemyInfos, setEnnemyInfos] = useState([]);
@@ -24,6 +25,7 @@ export default function Ennemy() {
         ennemyImg={ennemyInfos.picture_big}
         ennemyName={ennemyInfos.name}
       />
+      <LifeBar />
     </>
   );
 }
