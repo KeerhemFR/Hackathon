@@ -1,0 +1,33 @@
+.timer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 2, 129, 0.562);
+  border: 2px solid rgba(255, 2, 129, 0.562);
+  box-shadow: 0 0 0.2rem #fff,
+    0 0 0.2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+}
+
+.timer p {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 30px;
+  text-shadow: 0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #0fa,
+    0 0 80px #0fa,
+    0 0 90px #0fa,
+    0 0 100px #0fa,
+    0 0 150px #0fa;
+}

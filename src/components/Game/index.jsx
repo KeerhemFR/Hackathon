@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Player from './Player';
 import Ennemy from './Ennemy';
 import Button from './Button';
+import Timer from './Timer';
 import './style.css';
 
 export default function Game() {
@@ -19,6 +20,7 @@ export default function Game() {
         <Button content="Return" />
       </Link>
       <Button className="nextOne" content="Next round" />
+      <Timer />
     </>
   );
 }
