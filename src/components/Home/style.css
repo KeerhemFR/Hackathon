@@ -1,18 +1,21 @@
 .logo {
   width: 100vw;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  margin-top: 5vh;
+  height: 45vh;
+  margin-top: 7vh;
 }
 
 .omgLogo {
-  width: 60vw;
-  position: absolute;
-  z-index: 1;
+  width: 70%;
+  margin-left: 10%;
 }
 
-.logoType {
-  width: 60vw;
-  position: absolute;
+@media only screen and (max-width: 1500px) {
+  .omgLogo {
+    width: 75%;
+  }
+
+  .logo {
+    margin-left: 0%;
+    margin-top: 6vh;
+  }
 }
