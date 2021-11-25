@@ -10,9 +10,9 @@ export default function Home() {
         <img className="omgLogo" src={omgLogo} alt="omg" />
       </div>
       <Link to="/ChooseChar">
-        <Button content="Start" />
+        <Button className="homeButton" content="Start" />
       </Link>
-      <Button content="Scores" />
+      <Button className="homeButton" content="Scores" />
     </>
   );
 }
