@@ -1,12 +1,10 @@
-import Player from 'components/game/Player';
-import Ennemy from './components/game/Ennemy';
+import Game from 'components/Game';
 
 function App() {
   return (
     <>
       <h1>Componante APP</h1>
-      <Ennemy />
-      <Player />
+      <Game />
     </>
   );
 }

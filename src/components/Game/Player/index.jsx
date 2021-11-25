@@ -1,21 +1,13 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+// import PropTypes from 'prop-types';
 
 export default function Player() {
   const [playerInfos, setPlayerInfos] = useState([]);
 
   useEffect(() => {
-    const options = {
-      method: 'GET',
-      url: 'https://deezerdevs-deezer.p.rapidapi.com/artist/adele',
-      headers: {
-        'x-rapidapi-host': 'deezerdevs-deezer.p.rapidapi.com',
-        'x-rapidapi-key': '1d5d39d02amsh082d4e0db949ef8p180e55jsnd3a5fcc1c033',
-      },
-    };
-
     axios
-      .request(options)
+      .get('http://localhost:5050/OMG/adele')
       .then(({ data }) => {
         setPlayerInfos(data);
       })
@@ -24,11 +16,21 @@ export default function Player() {
       });
   }, []);
   console.log(playerInfos);
+  // setPlayerLvl();
 
   return (
     <>
-      <img src={playerInfos.picture_big} alt="" />
+      <img src={playerInfos.picture_big} alt={`${playerInfos.name}`} />
       <div>{playerInfos.name}</div>
     </>
   );
 }
+
+// Player.propTypes = {
+//   playerLvl: PropTypes.number,
+//   setPlayerLvl: PropTypes.func,
+// };
+// Player.defaultProps = {
+//   playerLvl: [],
+//   setPlayerLvl: () => {},
+// };
