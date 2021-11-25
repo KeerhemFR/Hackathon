@@ -14,7 +14,6 @@ export default function Player() {
         console.error(error);
       });
   }, []);
-  console.log(playerInfos);
   // setPlayerLvl();
 
   return (
