@@ -18,7 +18,7 @@ export default function Game() {
           <Button content="Return" />
         </Link>
         <div className="container">
-          <Button className="nextOne" content="Next round" />
+          <Button className="nextOne" content="Next Stage" />
         </div>
       </div>
       <div className="pulseWrapper">
