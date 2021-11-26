@@ -1,14 +1,20 @@
-import { useState, useEffect } from 'react';
+import GameContext from 'context/GameContext';
+import { useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './style.css';
 
 export default function Timer() {
-  const [seconds, setSeconds] = useState(30);
+  const { seconds, setSeconds } = useContext(GameContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (seconds > 0) {
       setTimeout(() => setSeconds(seconds - 1), 1000);
     } else {
       setSeconds('0');
+    }
+    if (seconds === 0) {
+      navigate('/');
     }
   });
 
