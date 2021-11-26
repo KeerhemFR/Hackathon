@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import 'animate.css';
 import Player from './Player';
 import Ennemy from './Ennemy';
 import Button from './Button';
