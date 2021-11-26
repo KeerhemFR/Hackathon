@@ -6,7 +6,7 @@ import './style.css';
 export default function Choosechar() {
   return (
     <>
-      <h1 className="chooseSinger">Choose your singer</h1> <br />
+      <h1 className="chooseSinger">Choose your Singer</h1> <br />
       <div className="chooseCharWrapper">
         <SearchBar />
         <div className="searchButtonWrapper">
