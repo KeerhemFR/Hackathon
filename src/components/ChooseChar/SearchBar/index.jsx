@@ -44,8 +44,12 @@ export default function SearchBar() {
         </form>
       </div>
       <div className="singerResults">
-        <img src={result.picture_medium} alt={result.name} />
-        <p>{result.name}</p>
+        <img
+          className="searchSingerImage"
+          src={result.picture_medium}
+          alt={result.name}
+        />
+        <p className="searchSingerName">{result.name}</p>
       </div>
     </>
   );
