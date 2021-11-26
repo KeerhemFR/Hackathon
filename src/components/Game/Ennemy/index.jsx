@@ -70,12 +70,6 @@ export default function Ennemy() {
           <code>audio</code> element.
         </audio>
       )}
-
-      <EnnemyCard
-        ennemyImg={ennemyInfos.picture_big}
-        ennemyName={ennemyInfos.name}
-      />
-      <LifeBar ennemyFan={ennemyInfos.nb_fan} />
     </div>
   );
 }

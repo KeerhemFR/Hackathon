@@ -31,3 +31,9 @@
     0 0 100px #0fa,
     0 0 150px #0fa;
 }
+
+.timerContain {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
