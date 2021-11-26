@@ -10,6 +10,7 @@ import './style.css';
 
 export default function Game() {
   const [playerLvl, setPlayerLvl] = useState(0);
+
   return (
     <>
       <h1 className="readyFight">READY? FIGHT!</h1>
