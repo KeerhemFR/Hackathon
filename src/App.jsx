@@ -19,16 +19,22 @@ function App() {
   const [ennemySelect, setEnnemySelect] = useState(0);
   const [ennemyIsDead, setEnnemyIsDead] = useState(false);
   const [seconds, setSeconds] = useState(30);
+  const [name, setName] = useState('');
+  const [picture, setPicture] = useState('');
 
   useEffect(() => {
     setProgress(Math.floor(ennemyFan / 1000));
     setEnemyHP(Math.floor(ennemyFan / 1000));
   }, [ennemyFan]);
-  console.log('progress:', progress);
+
   return (
     <>
       <GameContext.Provider
         value={{
+          picture,
+          setPicture,
+          name,
+          setName,
           progress,
           setProgress,
           ennemyInfos,

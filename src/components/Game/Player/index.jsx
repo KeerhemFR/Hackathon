@@ -1,29 +1,28 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+// import axios from 'axios';
+import { useContext } from 'react';
+import GameContext from 'context/GameContext';
 import './style.css';
 
 export default function Player() {
-  const [playerInfos, setPlayerInfos] = useState([]);
+  const { picture, name } = useContext(GameContext);
 
-  useEffect(() => {
-    axios
-      .get('http://192.168.1.232:5050/OMG/adele')
-      .then(({ data }) => {
-        setPlayerInfos(data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  }, []);
+  // const [playerInfos, setPlayerInfos] = useState([]);
+
+  // useEffect(() => {
+  //   axios
+  //     .get('http://192.168.1.232:5050/OMG/adele')
+  //     .then(({ data }) => {
+  //       setPlayerInfos(data);
+  //     })
+  //     .catch(function (error) {
+  //       console.error(error);
+  //     });
+  // }, []);
 
   return (
     <article className="playerCard">
-      <img
-        className="playerImage"
-        src={playerInfos.picture_big}
-        alt={`${playerInfos.name}`}
-      />
-      <p className="playerName">&nbsp;&nbsp;{playerInfos.name}</p>
+      <img className="playerImage" src={picture} alt={name} />
+      <p className="playerName">&nbsp;&nbsp;{name}</p>
     </article>
   );
 }
