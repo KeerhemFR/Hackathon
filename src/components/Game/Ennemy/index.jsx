@@ -8,22 +8,22 @@ import './style.css';
 export default function Ennemy() {
   const [playlist, setPlaylist] = useState({});
   const { ennemyInfos, setEnnemyInfos, setEnnemyFan } = useContext(GameContext);
+
   const ennemyTeams = [
     //
-    'Francky-Vincent',
-    'Patrick-Sebastien',
-    '558274',
-    '56093772',
-    'crazy-frog',
     'El-Chombo',
-    'Las-Ketchup',
     'Daler-Mehndi',
+    '56093772',
+    'Las-Ketchup',
+    'Patrick-Sebastien',
+    'Francky-Vincent',
+    '558274',
+    'crazy-frog',
     'anais-delva',
-    'daft-punk',
-    'jules',
-    'mariah-carey',
     'cascada',
+    'mariah-carey',
   ];
+
   const { ennemySelect } = useContext(GameContext);
   const { ennemyIsDead, setEnnemyIsDead } = useContext(GameContext);
 
@@ -54,6 +54,7 @@ export default function Ennemy() {
         <audio
           controls
           autoPlay="true"
+          loop="true"
           src={playlist.data[0].preview}
           style={{ display: 'none' }}
         >
