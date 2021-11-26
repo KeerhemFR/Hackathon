@@ -17,6 +17,8 @@ function App() {
   const [clickPower] = useState(100);
   const [ennemySelect, setEnnemySelect] = useState(0);
   const [ennemyIsDead, setEnnemyIsDead] = useState(false);
+  const [seconds, setSeconds] = useState(30);
+
   useEffect(() => {
     setProgress(Math.floor(ennemyFan / 1000));
     setEnemyHP(Math.floor(ennemyFan / 1000));
@@ -38,6 +40,8 @@ function App() {
           ennemySelect,
           ennemyIsDead,
           setEnnemyIsDead,
+          seconds,
+          setSeconds,
         }}
       >
         <Routes>
