@@ -24,11 +24,11 @@ export default function LifeBar() {
 
   return (
     <div className="LifeBar">
-      <p>
-        HP :{progress}/{enemyHP}
-      </p>
       <p>{setEnnemyIsDead}</p>
       <progress id="file" max={enemyHP} value={progress} />
+      <p className="hpCount">
+        HP : {progress}/{enemyHP}
+      </p>
     </div>
   );
 }
