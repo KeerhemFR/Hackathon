@@ -10,15 +10,18 @@ export default function SearchBar() {
   const { setPicture, setName } = useContext(GameContext);
 
   useEffect(() => {
-    const path = `http://192.168.1.232:5050/OMG/${needleSinger}`;
-    axios
-      .get(path)
-      .then((response) => response.data)
-      .then((data) => {
-        setResult(data);
-        setName(data.name);
-        setPicture(data.picture_big);
-      });
+    try {
+      axios
+        .get(`http://192.168.1.232:5050/OMG/${needleSinger}`)
+        .then((response) => response.data)
+        .then((data) => {
+          setResult(data);
+          setName(data.name);
+          setPicture(data.picture_big);
+        });
+    } catch (error) {
+      console.error('Oops i did it again!');
+    }
   }, [needleSinger]);
 
   const handleSearchSinger = (e) => {
