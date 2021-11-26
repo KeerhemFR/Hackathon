@@ -1,6 +1,11 @@
+.chooseCharWrapper {
+  height: 100vh;
+}
+
 .chooseSinger {
-  font-size: 75px;
+  width: 100vw;
   text-align: center;
+  font-size: 75px;
   color: white;
   font-weight: 200;
   margin-bottom: 15vh;
@@ -13,6 +18,7 @@
     0 0 90px #0fa,
     0 0 100px #0fa,
     0 0 150px #0fa;
+
 }
 
 .searchButtonWrapper {
@@ -24,6 +30,7 @@
   top: 40%;
   right: 20%;
 }
+
 
 .chooseCharWrapper {
   width: 100%;
@@ -42,3 +49,4 @@
     right: 25%;
   }
 }
+
