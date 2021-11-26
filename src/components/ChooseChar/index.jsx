@@ -5,19 +5,17 @@ import './style.css';
 
 export default function Choosechar() {
   return (
-    <>
+    <div className="chooseCharWrapper">
       <h1 className="chooseSinger">Choose your Singer</h1> <br />
-      <div className="chooseCharWrapper">
-        <SearchBar />
-        <div className="searchButtonWrapper">
-          <Link to="/Game">
-            <Button className="searchBarButton" content="Play" />
-          </Link>
-          <Link to="/">
-            <Button className="searchBarButton" content="Return" />
-          </Link>
-        </div>
+      <SearchBar />
+      <div className="searchButtonWrapper">
+        <Link to="/Game">
+          <Button className="searchBarButton" content="Play" />
+        </Link>
+        <Link to="/">
+          <Button className="searchBarButton" content="Return" />
+        </Link>
       </div>
-    </>
+    </div>
   );
 }
