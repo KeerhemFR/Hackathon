@@ -14,9 +14,10 @@ export default function Timer() {
       setSeconds('0');
     }
     if (seconds === 0) {
-      navigate('/');
+      navigate('/GameOver');
+      setSeconds('30');
     }
-  });
+  }, [seconds]);
 
   return (
     <div className="timerContain">
