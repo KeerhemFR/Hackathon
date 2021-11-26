@@ -3,18 +3,19 @@ import { useContext, useEffect } from 'react';
 import './style.css';
 
 export default function LifeBar() {
-  const { progress, setProgress } = useContext(GameContext);
-  // const { ennemyInfos } = useContext(GameContext);
-  const { enemyHP } = useContext(GameContext);
-  const { ennemySelect, setEnnemySelect } = useContext(GameContext);
-  const { ennemyIsDead, setEnnemyIsDead } = useContext(GameContext);
+  const {
+    ennemySelect,
+    setEnnemySelect,
+    setEnnemyIsDead,
+    enemyHP,
+    progress,
+    setProgress,
+  } = useContext(GameContext);
 
   useEffect(() => {
     if (!progress) {
       setEnnemySelect(ennemySelect + 1);
       setEnnemyIsDead(true);
-
-      console.log(ennemyIsDead);
     }
   }, [progress]);
 
