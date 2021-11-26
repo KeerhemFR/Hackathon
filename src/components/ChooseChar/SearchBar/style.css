@@ -1,0 +1,25 @@
+.searchSinger {
+  padding-left: 8vh;
+  width: 80%;
+  height: 10vh;
+  background-color: #0f0526;
+  font-size: 1.87rem;
+  border-radius: 40px;
+  box-shadow: 0 0 1rem #fff, inset 0 0 1.3rem #0ec4f1;
+  border: 3px solid #0ec4f1;
+  color: white;
+}
+
+.inputLogo {
+  width: 4vh;
+  position: absolute;
+  background-color: transparent;
+  top: 50%;
+  left: 4vh;
+  transform: translate(-50%, -50%);
+}
+
+.wrap {
+  width: 100vw;
+  position: relative;
+}
