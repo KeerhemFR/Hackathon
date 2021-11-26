@@ -5,6 +5,7 @@ import Ennemy from './Ennemy';
 import Button from './Button';
 import Timer from './Timer';
 import AttackButton from './AttackButton';
+import Pulse from '../Pulse';
 
 import './style.css';
 
@@ -21,11 +22,7 @@ export default function Game() {
           <Button className="nextOne" content="Next round" />
         </div>
       </div>
-      <div className="pulseWrapper">
-        <div className="pulseContainer" />
-        <div className="pulseContainer2" />
-        <div className="pulseContainer3" />
-      </div>
+      <Pulse />
 
       <h1 className="readyFight">READY? FIGHT!</h1>
       <Timer />

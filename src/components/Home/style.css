@@ -6,10 +6,33 @@
 .omgLogo {
   width: 70%;
   margin-left: 7%;
+  animation: myAnimation 0.4s linear, flickerLogo 2s infinite linear;
 }
 
 .homeButton {
   margin-top: 10%;
+}
+
+@keyframes flickerLogo {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.03);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  75% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media only screen and (max-width: 1500px) {

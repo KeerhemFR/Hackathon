@@ -5,7 +5,7 @@ import './style.css';
 
 export default function SearchBar() {
   const [needleSinger, setNeedleSinger] = useState('');
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState({});
 
   const { setPicture, setName } = useContext(GameContext);
 
@@ -44,12 +44,17 @@ export default function SearchBar() {
         </form>
       </div>
       <div className="singerResults">
-        <img
-          className="searchSingerImage"
-          src={result.picture_medium}
-          alt={result.name}
-        />
-        <p className="searchSingerName">{result.name}</p>
+        {needleSinger && (
+          <>
+            {' '}
+            <img
+              className="searchSingerImage"
+              src={result.picture_medium}
+              alt={result.name}
+            />
+            <p className="searchSingerName">{result.name}</p>{' '}
+          </>
+        )}
       </div>
     </>
   );
