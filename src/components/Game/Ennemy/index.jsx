@@ -8,7 +8,22 @@ import './style.css';
 export default function Ennemy() {
   const [playlist, setPlaylist] = useState({});
   const { ennemyInfos, setEnnemyInfos, setEnnemyFan } = useContext(GameContext);
-  const ennemyTeams = ['daft-punk', 'jules', 'crazy-frog'];
+  const ennemyTeams = [
+    //
+    'Francky-Vincent',
+    'Patrick-Sebastien',
+    '558274',
+    '56093772',
+    'crazy-frog',
+    'El-Chombo',
+    'Las-Ketchup',
+    'Daler-Mehndi',
+    'anais-delva',
+    'daft-punk',
+    'jules',
+    'mariah-carey',
+    'cascada',
+  ];
   const { ennemySelect } = useContext(GameContext);
   const { ennemyIsDead, setEnnemyIsDead } = useContext(GameContext);
 
