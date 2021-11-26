@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Player from './Player';
 import Ennemy from './Ennemy';
@@ -10,8 +9,6 @@ import Pulse from '../Pulse';
 import './style.css';
 
 export default function Game() {
-  const [playerLvl, setPlayerLvl] = useState(0);
-
   return (
     <div className="gameWrapper">
       <div className="buttonWrapper">
@@ -27,7 +24,7 @@ export default function Game() {
       <h1 className="readyFight">READY? FIGHT!</h1>
       <Timer />
       <div className="fightContain">
-        <Player playerLvl={playerLvl} setPlayerLvl={setPlayerLvl} />
+        <Player />
         <AttackButton className="attackButton" />
 
         <Ennemy />
