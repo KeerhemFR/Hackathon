@@ -21,7 +21,6 @@
 
 .readyFight {
   margin: 20px 0;
-  overflow: hidden;
   font-size: 75px;
   text-align: center;
   color: white;
@@ -47,9 +46,6 @@
     text-shadow: none;
   }
 }
-
-
-/* ------------------------------------------- */
 
 .pulseWrapper {
   overflow: hidden;
@@ -99,4 +95,3 @@
     box-shadow: 0 0 0 0 rgba(187, 111, 231, 0.062);
   }
 }
-
