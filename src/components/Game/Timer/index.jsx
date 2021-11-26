@@ -13,8 +13,10 @@ export default function Timer() {
   });
 
   return (
-    <div className="timer">
-      <p>{seconds}</p>
+    <div className="timerContain">
+      <div className="timer">
+        <p>{seconds}</p>
+      </div>
     </div>
   );
 }
