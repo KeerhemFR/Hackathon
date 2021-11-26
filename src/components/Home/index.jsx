@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom';
 import omgLogo from '../Assets/omgLogo.png';
 import Button from '../Game/Button';
+import Pulse from '../Pulse';
 import './style.css';
 
 export default function Home() {
   return (
-    <div className="homeWrapper">
+
+    <>
+      <Pulse />
+      <div className="homeWrapper">
+
       <div className="logo">
         <img className="omgLogo" src={omgLogo} alt="omg" />
       </div>
