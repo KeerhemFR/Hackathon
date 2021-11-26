@@ -16,7 +16,7 @@ export default function Timer() {
     if (seconds === 0) {
       navigate('/GameOver');
     }
-  });
+  }, [seconds]);
 
   return (
     <div className="timerContain">

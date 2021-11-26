@@ -1,10 +1,14 @@
+.chooseCharWrapper {
+  height: 100vh;
+}
+
 .chooseSinger {
-  font-size: 75px;
+  width: 100vw;
   text-align: center;
+  font-size: 75px;
   color: white;
   font-weight: 200;
   animation: flicker2 6s infinite linear;
-  margin-bottom: 15vh;
 }
 
 .searchButtonWrapper {
@@ -15,9 +19,4 @@
   position: absolute;
   top: 40%;
   right: 20%;
-}
-
-.chooseCharWrapper {
-  width: 100%;
-  margin-left: 10%;
 }

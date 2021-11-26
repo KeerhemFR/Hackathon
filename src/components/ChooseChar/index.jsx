@@ -8,7 +8,7 @@ import './style.css';
 export default function Choosechar() {
   const { name } = useContext(GameContext);
   return (
-    <>
+    <div className="chooseCharWrapper">
       <h1 className="chooseSinger">Choose your Singer</h1> <br />
       <div className="chooseCharWrapper">
         <SearchBar />
@@ -24,6 +24,6 @@ export default function Choosechar() {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
