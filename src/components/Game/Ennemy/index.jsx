@@ -1,12 +1,13 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import GameContext from 'context/GameContext';
 import EnnemyCard from './EnnemyCard';
 import LifeBar from './LifeBar';
 import './style.css';
 
 export default function Ennemy() {
-  const [ennemyInfos, setEnnemyInfos] = useState([]);
   const [playlist, setPlaylist] = useState({});
+  const { ennemyInfos, setEnnemyInfos, setEnnemyFan } = useContext(GameContext);
 
   useEffect(() => {
     let ennemyData;
@@ -14,10 +15,10 @@ export default function Ennemy() {
       .get('http://192.168.1.232:5050/OMG/daft-punk')
       .then(({ data }) => {
         setEnnemyInfos(data);
+        setEnnemyFan(data.nb_fan);
         ennemyData = data;
       })
       .then(() => {
-        console.log('--------', ennemyData);
         axios
           .get(`http://192.168.1.232:5050/OMG/music/${ennemyData.id}`)
           .then(({ data }) => {
@@ -70,6 +71,14 @@ export default function Ennemy() {
           <code>audio</code> element.
         </audio>
       )}
+
+
+      <EnnemyCard
+        ennemyImg={ennemyInfos.picture_big}
+        ennemyName={ennemyInfos.name}
+      />
+      {ennemyInfos.nb_fan && <LifeBar />}
+
     </div>
   );
 }
