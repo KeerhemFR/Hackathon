@@ -11,23 +11,29 @@ import './style.css';
 export default function Game() {
   const [playerLvl, setPlayerLvl] = useState(0);
   return (
-    <>
+    <div className="gameWrapper">
+      <div className="buttonWrapper">
+        <Link to="/ChooseChar">
+          <Button content="Return" />
+        </Link>
+        <div className="container">
+          <Button className="nextOne" content="Next round" />
+        </div>
+      </div>
+      <div className="pulseWrapper">
+        <div className="pulseContainer" />
+        <div className="pulseContainer2" />
+        <div className="pulseContainer3" />
+      </div>
+
       <h1 className="readyFight">READY? FIGHT!</h1>
       <Timer />
       <div className="fightContain">
         <Player playerLvl={playerLvl} setPlayerLvl={setPlayerLvl} />
-        <AttackButton />
+        <AttackButton className="attackButton" />
 
         <Ennemy />
       </div>
-
-      <Link to="/ChooseChar">
-        <Button content="Return" />
-      </Link>
-
-      <div className="container">
-        <Button className="nextOne" content="Next round" />
-      </div>
-    </>
+    </div>
   );
 }
