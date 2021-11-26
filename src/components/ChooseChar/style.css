@@ -1,0 +1,23 @@
+.chooseSinger {
+  font-size: 75px;
+  text-align: center;
+  color: white;
+  font-weight: 200;
+  animation: flicker2 6s infinite linear;
+  margin-bottom: 15vh;
+}
+
+.searchButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: absolute;
+  top: 40%;
+  right: 20%;
+}
+
+.chooseCharWrapper {
+  width: 100%;
+  margin-left: 10%;
+}
