@@ -13,18 +13,18 @@ function App() {
   const [ennemyInfos, setEnnemyInfos] = useState([]);
   const [ennemyFan, setEnnemyFan] = useState(1000000);
 
-  const [progress, setProgress] = useState(Math.floor(ennemyFan / 1000));
-  const [enemyHP, setEnemyHP] = useState(Math.floor(ennemyFan / 1000));
-  const [clickPower] = useState(100);
+  const [progress, setProgress] = useState(Math.floor(ennemyFan / 100));
+  const [enemyHP, setEnemyHP] = useState(Math.floor(ennemyFan / 100));
+  const [clickPower] = useState(10);
   const [ennemySelect, setEnnemySelect] = useState(0);
   const [ennemyIsDead, setEnnemyIsDead] = useState(false);
-  const [seconds, setSeconds] = useState(30);
+  const [seconds, setSeconds] = useState(120);
   const [name, setName] = useState('');
   const [picture, setPicture] = useState('');
 
   useEffect(() => {
-    setProgress(Math.floor(ennemyFan / 1000));
-    setEnemyHP(Math.floor(ennemyFan / 1000));
+    setProgress(Math.floor(ennemyFan / 100));
+    setEnemyHP(Math.floor(ennemyFan / 100));
   }, [ennemyFan]);
 
   return (

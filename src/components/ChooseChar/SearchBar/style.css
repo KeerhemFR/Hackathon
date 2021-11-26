@@ -5,13 +5,8 @@
   background-color: #0f0526;
   font-size: 1.87rem;
   border-radius: 40px;
-  box-shadow:
-    0 0 0.2rem #fff,
-    0 0 0.2rem #fff,
-    0 0 2rem #bc13fe,
-    0 0 0.8rem #bc13fe,
-    0 0 2.8rem #bc13fe,
-    inset 0 0 1.3rem #bc13fe;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
   border: 3px solid #0ec4f1;
   color: white;
 }
@@ -36,7 +31,7 @@
 }
 
 .singerResults {
-  margin-top: 2%;
+  margin: 0;
   width: 40%;
   height: 80vh;
   display: flex;
@@ -46,31 +41,20 @@
 }
 
 .searchSingerImage {
+  margin: 0;
   height: auto;
-  width: 500px;
+  width: 300px;
   border-radius: 50% 15px 15px 0%;
-  box-shadow:
-    0 0 1rem #fff,
-    0 0 0.4rem #fff,
-    0 0 6rem #0ec4f1,
-    0 0 10rem #0ec4f1,
-    0 0 3.8rem #0ec4f1,
-    inset 0 0 1.3rem #0ec4f1;
+  box-shadow: 0 0 1rem #fff, 0 0 0.4rem #fff, 0 0 6rem #0ec4f1,
+    0 0 10rem #0ec4f1, 0 0 3.8rem #0ec4f1, inset 0 0 1.3rem #0ec4f1;
   border: 3px solid #0ec4f1;
 }
 
 .searchSingerName {
   font-size: 40px;
   color: white;
-  text-shadow:
-    0 0 4px #fff,
-    0 0 11px #fff,
-    0 0 19px #fff,
-    0 0 40px #0fa,
-    0 0 80px #0fa,
-    0 0 90px #0fa,
-    0 0 100px #0fa,
-    0 0 150px #0fa;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+    0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
 }
 
 @media only screen and (max-width: 768px) {

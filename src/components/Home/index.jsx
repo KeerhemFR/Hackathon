@@ -6,14 +6,18 @@ import './style.css';
 
 export default function Home() {
   return (
+
     <>
       <Pulse />
+      <div className="homeWrapper">
+
       <div className="logo">
         <img className="omgLogo" src={omgLogo} alt="omg" />
       </div>
       <Link to="/ChooseChar">
         <Button className="homeButton" content="Start" />
       </Link>
-    </>
+      <Button className="homeButton" content="Scores" />
+    </div>
   );
 }
