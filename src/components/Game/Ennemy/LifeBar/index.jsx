@@ -1,11 +1,22 @@
 import GameContext from 'context/GameContext';
-import { useContext, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import './style.css';
 
 export default function LifeBar() {
   const { progress, setProgress } = useContext(GameContext);
-  const { ennemyInfos } = useContext(GameContext);
-  const [enemyHP] = useState(Math.floor(ennemyInfos.nb_fan / 1000));
+  // const { ennemyInfos } = useContext(GameContext);
+  const { enemyHP } = useContext(GameContext);
+  const { ennemySelect, setEnnemySelect } = useContext(GameContext);
+  const { ennemyIsDead, setEnnemyIsDead } = useContext(GameContext);
+
+  useEffect(() => {
+    if (!progress) {
+      setEnnemySelect(ennemySelect + 1);
+      setEnnemyIsDead(true);
+
+      console.log(ennemyIsDead);
+    }
+  }, [progress]);
 
   if (progress < 0) {
     setProgress(0);
@@ -16,6 +27,7 @@ export default function LifeBar() {
       <p>
         HP :{progress}/{enemyHP}
       </p>
+      <p>{setEnnemyIsDead}</p>
       <progress id="file" max={enemyHP} value={progress} />
     </div>
   );

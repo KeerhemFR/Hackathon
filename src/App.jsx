@@ -10,13 +10,18 @@ import './App.css';
 
 function App() {
   const [ennemyInfos, setEnnemyInfos] = useState([]);
-  const [ennemyFan, setEnnemyFan] = useState(0);
-  const [enemyHP] = useState(Math.floor(ennemyFan / 1000));
+  const [ennemyFan, setEnnemyFan] = useState(1000000);
+
   const [progress, setProgress] = useState(Math.floor(ennemyFan / 1000));
+  const [enemyHP, setEnemyHP] = useState(Math.floor(ennemyFan / 1000));
   const [clickPower] = useState(100);
+  const [ennemySelect, setEnnemySelect] = useState(0);
+  const [ennemyIsDead, setEnnemyIsDead] = useState(false);
   useEffect(() => {
     setProgress(Math.floor(ennemyFan / 1000));
+    setEnemyHP(Math.floor(ennemyFan / 1000));
   }, [ennemyFan]);
+  console.log('progress:', progress);
   return (
     <>
       <GameContext.Provider
@@ -29,6 +34,10 @@ function App() {
           ennemyFan,
           setEnnemyFan,
           clickPower,
+          setEnnemySelect,
+          ennemySelect,
+          ennemyIsDead,
+          setEnnemyIsDead,
         }}
       >
         <Routes>

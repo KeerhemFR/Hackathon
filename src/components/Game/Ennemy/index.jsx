@@ -8,14 +8,18 @@ import './style.css';
 export default function Ennemy() {
   const [playlist, setPlaylist] = useState({});
   const { ennemyInfos, setEnnemyInfos, setEnnemyFan } = useContext(GameContext);
+  const ennemyTeams = ['daft-punk', 'jules', 'crazy-frog'];
+  const { ennemySelect } = useContext(GameContext);
+  const { ennemyIsDead, setEnnemyIsDead } = useContext(GameContext);
 
   useEffect(() => {
     let ennemyData;
     axios
-      .get('http://192.168.1.232:5050/OMG/daft-punk')
+      .get(`http://192.168.1.232:5050/OMG/${ennemyTeams[ennemySelect]}`)
       .then(({ data }) => {
         setEnnemyInfos(data);
         setEnnemyFan(data.nb_fan);
+        setEnnemyIsDead(false);
         ennemyData = data;
       })
       .then(() => {
@@ -28,12 +32,14 @@ export default function Ennemy() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+    console.log(ennemyIsDead);
+  }, [ennemyIsDead]);
   return (
     <div className="EnemyFighting">
       {playlist.data && (
         <audio
           controls
+          autoPlay="true"
           src={playlist.data[0].preview}
           style={{ display: 'none' }}
         >
