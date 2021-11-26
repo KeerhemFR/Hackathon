@@ -1,4 +1,6 @@
 .attackBtn {
   position: absolute;
   left: 45%;
+  color: white;
+  background-color: pink;
 }
