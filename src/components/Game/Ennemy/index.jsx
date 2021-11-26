@@ -47,7 +47,6 @@ export default function Ennemy() {
       .catch((error) => {
         console.log(error);
       });
-    console.log(ennemyIsDead);
   }, [ennemyIsDead]);
   return (
     <div className="EnemyFighting">

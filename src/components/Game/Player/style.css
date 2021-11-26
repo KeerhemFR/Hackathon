@@ -2,17 +2,13 @@
   position: relative;
   width: 300px;
   height: 300px;
-  box-shadow:
-    0 0 1rem #fff,
-    0 0 0.4rem #fff,
-    0 0 6rem #0ec4f1,
-    0 0 10rem #0ec4f1,
-    0 0 3.8rem #0ec4f1,
-    inset 0 0 1.3rem #0ec4f1;
+  box-shadow: 0 0 1rem #fff, 0 0 0.4rem #fff, 0 0 6rem #0ec4f1,
+    0 0 10rem #0ec4f1, 0 0 3.8rem #0ec4f1, inset 0 0 1.3rem #0ec4f1;
   border: 3px solid #0ec4f1;
   border-radius: 50% 15px 15px 0%;
   overflow: hidden;
   margin-bottom: 75px;
+  margin-top: -70px;
 }
 
 .playerImage {
@@ -40,13 +36,6 @@
   );
   font-size: 25px;
   color: white;
-  text-shadow:
-    0 0 4px #fff,
-    0 0 11px #fff,
-    0 0 19px #fff,
-    0 0 40px #0fa,
-    0 0 80px #0fa,
-    0 0 90px #0fa,
-    0 0 100px #0fa,
-    0 0 150px #0fa;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+    0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
 }
