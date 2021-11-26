@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import GameContext from 'context/GameContext';
+import './style.css';
 
 export default function AttackButton() {
   const { progress, setProgress, clickPower } = useContext(GameContext);
