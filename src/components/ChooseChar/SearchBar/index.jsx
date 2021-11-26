@@ -1,23 +1,25 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import GameContext from 'context/GameContext';
+import { useEffect, useState, useContext } from 'react';
 import './style.css';
 
 export default function SearchBar() {
   const [needleSinger, setNeedleSinger] = useState('');
   const [result, setResult] = useState('');
 
+  const { setPicture, setName } = useContext(GameContext);
+
   useEffect(() => {
     const path = `http://192.168.1.232:5050/OMG/${needleSinger}`;
-    console.log(path);
     axios
       .get(path)
       .then((response) => response.data)
       .then((data) => {
         setResult(data);
+        setName(data.name);
+        setPicture(data.picture_big);
       });
   }, [needleSinger]);
-
-  console.log(result);
 
   const handleSearchSinger = (e) => {
     setNeedleSinger(e.target.value);
