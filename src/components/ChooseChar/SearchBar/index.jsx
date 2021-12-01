@@ -12,7 +12,7 @@ export default function SearchBar() {
   useEffect(() => {
     try {
       axios
-        .get(`http://192.168.1.232:5050/OMG/${needleSinger}`)
+        .get(`http://localhost:5051/OMG/${needleSinger}`)
         .then((response) => response.data)
         .then((data) => {
           setResult(data);
