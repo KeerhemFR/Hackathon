@@ -30,7 +30,7 @@ export default function Ennemy() {
   useEffect(() => {
     let ennemyData;
     axios
-      .get(`http://192.168.1.232:5050/OMG/${ennemyTeams[ennemySelect]}`)
+      .get(`http://localhost:5051/OMG/${ennemyTeams[ennemySelect]}`)
       .then(({ data }) => {
         setEnnemyInfos(data);
         setEnnemyFan(data.nb_fan);
@@ -39,7 +39,7 @@ export default function Ennemy() {
       })
       .then(() => {
         axios
-          .get(`http://192.168.1.232:5050/OMG/music/${ennemyData.id}`)
+          .get(`http://localhost:5051/OMG/music/${ennemyData.id}`)
           .then(({ data }) => {
             setPlaylist(data);
           });

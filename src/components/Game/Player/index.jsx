@@ -10,7 +10,7 @@ export default function Player() {
 
   // useEffect(() => {
   //   axios
-  //     .get('http://192.168.1.232:5050/OMG/adele')
+  //     .get('http://localhost:5050/OMG/adele')
   //     .then(({ data }) => {
   //       setPlayerInfos(data);
   //     })
