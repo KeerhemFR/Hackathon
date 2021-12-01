@@ -15,7 +15,6 @@ export default function Home() {
         <Link to="/ChooseChar">
           <Button className="homeButton" content="Start" />
         </Link>
-        <Button className="homeButton" content="Scores" />
       </div>
     </>
   );

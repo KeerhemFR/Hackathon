@@ -74,9 +74,14 @@
   }
 
   .searchSingerImage {
+    margin-left: 90px;
     height: auto;
     width: 250px;
     padding: 0;
+  }
+
+  .searchSingerName {
+    margin-left: 90px;
   }
 
   .singerResults {

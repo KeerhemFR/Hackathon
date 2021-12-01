@@ -11,7 +11,7 @@ export default function AttackButton() {
         type="submit"
         onClick={() => setProgress(progress - clickPower)}
       >
-        Attack
+        Mute this
       </button>
     </div>
   );
