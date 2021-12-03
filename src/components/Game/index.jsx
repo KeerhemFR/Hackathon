@@ -24,7 +24,7 @@ export default function Game() {
       <h1 className="readyFight">READY? FIGHT!</h1>
       <Timer />
       <div className="fightContain">
-        <Player />
+        <Player className="player" />
         <AttackButton className="attackButton" />
 
         <Ennemy />

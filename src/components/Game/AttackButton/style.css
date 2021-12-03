@@ -4,3 +4,11 @@
   color: white;
   background-color: pink;
 }
+
+@media only screen and (max-width: 768px) {
+  .attackBtn {
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+  }
+}

@@ -14,7 +14,7 @@ export default function AttackButton() {
           !ennemyIsDead ? () => setProgress(progress - clickPower) : null
         }
       >
-        Attack
+        Mute this
       </button>
     </div>
   );

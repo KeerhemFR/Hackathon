@@ -1,10 +1,14 @@
 .logo {
+  margin-bottom: 4vh;
+  display: flex;
+  justify-content: center;
   width: 100vw;
 }
 
 .omgLogo {
+  margin-right: 100px;
   width: 70%;
-  margin-left: 7%;
+  height: auto;
   animation: myAnimation 0.4s linear, flickerLogo 2s infinite linear;
 }
 
