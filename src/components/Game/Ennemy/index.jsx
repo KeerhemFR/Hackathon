@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import GameContext from 'context/GameContext';
 import EnnemyCard from './EnnemyCard';
 import LifeBar from './LifeBar';
@@ -8,6 +9,7 @@ import './style.css';
 export default function Ennemy() {
   const [playlist, setPlaylist] = useState({});
   const { ennemyInfos, setEnnemyInfos, setEnnemyFan } = useContext(GameContext);
+  const navigate = useNavigate();
 
   const ennemyTeams = [
     //
@@ -24,29 +26,33 @@ export default function Ennemy() {
     'mariah-carey',
   ];
 
-  const { ennemySelect } = useContext(GameContext);
-  const { ennemyIsDead, setEnnemyIsDead } = useContext(GameContext);
+  const { ennemyIsDead, setEnnemyIsDead, ennemySelect } =
+    useContext(GameContext);
 
   useEffect(() => {
-    let ennemyData;
-    axios
-      .get(`http://localhost:5051/OMG/${ennemyTeams[ennemySelect]}`)
-      .then(({ data }) => {
-        setEnnemyInfos(data);
-        setEnnemyFan(data.nb_fan);
-        setEnnemyIsDead(false);
-        ennemyData = data;
-      })
-      .then(() => {
-        axios
-          .get(`http://localhost:5051/OMG/music/${ennemyData.id}`)
-          .then(({ data }) => {
-            setPlaylist(data);
-          });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (ennemyTeams[ennemySelect] !== undefined) {
+      let ennemyData;
+      axios
+        .get(`http://localhost:5051/OMG/${ennemyTeams[ennemySelect]}`)
+        .then(({ data }) => {
+          setEnnemyInfos(data);
+          setEnnemyFan(data.nb_fan);
+          setEnnemyIsDead(false);
+          ennemyData = data;
+        })
+        .then(() => {
+          axios
+            .get(`http://localhost:5051/OMG/music/${ennemyData.id}`)
+            .then(({ data }) => {
+              setPlaylist(data);
+            });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      navigate('/GameOver');
+    }
   }, [ennemyIsDead]);
   return (
     <div className="EnemyFighting">

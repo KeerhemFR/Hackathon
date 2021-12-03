@@ -10,11 +10,14 @@ export default function LifeBar() {
     enemyHP,
     progress,
     setProgress,
+    setPlayerLevel,
+    playerLevel,
   } = useContext(GameContext);
 
   useEffect(() => {
     if (!progress) {
       setEnnemySelect(ennemySelect + 1);
+      setPlayerLevel(playerLevel + 1);
       setEnnemyIsDead(true);
     }
   }, [progress]);
